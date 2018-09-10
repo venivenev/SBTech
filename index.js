@@ -103,7 +103,7 @@ app.post('/order/add', (req, res) => {
         var productsList = JSON.parse(products);
         const newOrder = { date:dateString, products:productsList, status:status };
         let statusReturned = 200;
-        orderModel.insert(newOrder)
+        orderModel.insert(newOrder)//
             .then(() => {
                 res.status(statusReturned).end();
             }).catch(err => {
